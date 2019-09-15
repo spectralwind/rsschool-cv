@@ -1,1 +1,1 @@
-# rsschool-cv
+[My CV](https://spectralwind.github.io/rsschool-cv/cv)
