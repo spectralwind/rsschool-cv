@@ -67,3 +67,7 @@ The Specialist degree in Computer Science
 State Educational Institution of Higher Professional Education Ivanovo State Power University named after V.I. Lenin,    
 Ivanovo, Russia    
 2009 - 2014    
+
+#### ENGLISH LANGUAGE
+
+Knowledge from school and university. Also I listen podcasts, watch films, series, TED Talks and read books.
