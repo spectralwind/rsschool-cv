@@ -56,3 +56,14 @@ app.post('/register', (req, res) => {
   res.json(database.users[database.users.length-1]);
 })
 ```
+
+#### EXPERIENCE
+
+["Brain Games" the first training project on Hexlet](https://github.com/spectralwind/brain-games-spectralwind)
+
+#### EDUCATION
+
+The Specialist degree in Computer Science  
+State Educational Institution of Higher Professional Education Ivanovo State Power University named after V.I. Lenin,    
+Ivanovo, Russia    
+2009 - 2014    
