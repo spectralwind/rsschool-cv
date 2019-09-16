@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Junior JavaScript Developer Resume</title>
+</head>
+<body>
+  <div class="cv">
+    <h1>Junior JavaScript Developer Resume</h1>
+    <img src="https://cdn1.savepice.ru/uploads/2019/9/16/b0af13aec2960dafd51cdb04a8eb0ce9-full.jpg" alt="cv-photo" width="300" height="400">
+    <p class="contact-info"><b>Timofei Petrov</b><br>
+      Nizhny Novgorod, Russia<br>
+      <a href="https://t.me/spectral_wind">Telegram</a> 
+      <span>|</span>
+      <a href="mailto:timofey1992@gmail.com">Email</a>
+    </p>
+    <h4>Personal Summary</h4>
+    <p>Responsible, detail-oriented and hard working person. 
+      I am looking for a junior position of javascript developer 
+      that will allow me constantly improve my skills in coding, 
+      testing applications, problem solving. I want to learn how 
+      to work in a team of talented IT professionals. I would like 
+      to join a company where thanks to teamwork we will create 
+      applications to the highest standards.
+    </p>
+    <h4>Summary of Skills</h4>
+    <ul>
+      <li>Understanding of web-related technologies such as HTML5, CSS3, DOM, RESTful API</li>
+      <li>Basic knowledge: JavaScript, Bootstrap, React, Node.js, npm, Babel, Git</li>
+      <li>Knowledge of Linux operating system. OS Windows at the system administrator level</li>
+      <li>Understanding of software development life cycle</li>
+      <li>Ability to read and understand documentation</li>
+      <li>Can work independently and under the direction</li>
+    </ul>
+    <h4>Code Examples</h4>
+    <details>
+      <summary>(React) Calculation of the position of human face based on Clarifai API:</summary>
+      <pre class="prettyprint">
+        calculateFaceLocation = (data) => {
+          const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+          const image = document.getElementById('inputimage');
+          const width = Number(image.width);
+          const height = Number(image.height);
+          return {
+            leftCol: clarifaiFace.left_col * width,
+            topRow:  clarifaiFace.top_row * height,
+            rightCol: width - (clarifaiFace.right_col * width),
+            bottomRow: height - (clarifaiFace.bottom_row * height)
+          }
+        }
+      </pre>
+    </details>
+    <details>
+      <summary>(Node.js) Registration for new users using hash passwords:</summary>
+      <pre class="prettyprint">
+        app.post('/register', (req, res) => {
+          const {email, name, password} = req.body;
+          bcrypt.hash(password, saltRounds, function(err, hash) {
+            console.log(hash);
+          });
+          database.users.push({
+            id: '125',
+            name: name,
+            email: email,
+            password: password,
+            entries: 0,
+            joined: new Date()
+          })
+          res.json(database.users[database.users.length-1]);
+        })
+      </pre>
+    </details>
+    <h4>Experience</h4>
+    <a href="https://github.com/spectralwind/brain-games-spectralwind">“Brain Games” the first training project on Hexlet</a>
+    <h4>Education</h4>
+    <p>The Specialist degree in Computer Science<br>
+      State Educational Institution of Higher Professional Education Ivanovo State Power University named after V.I. Lenin,<br>
+      Ivanovo, Russia<br>
+      2009 - 2014<br>
+    </p>
+    <h4>English Language</h4>
+    <p>Knowledge from school and university. Also I listen podcasts, watch films, series, TED Talks and read books.</p>
+  </div>  
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>
